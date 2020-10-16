@@ -44,6 +44,7 @@ class PreviewImageFragmentIT : AbstractIT() {
         activity.addFragment(sut)
 
         shortSleep()
+        shortSleep()
 
         screenshot(activity)
     }
@@ -53,13 +54,14 @@ class PreviewImageFragmentIT : AbstractIT() {
     fun validImage() {
         val activity = testActivityRule.launchActivity(null)
 
-        val ocFile = OCFile("/test.png")
+        val ocFile = OCFile("/imageFile.png")
         ocFile.storagePath = getFile("imageFile.png").absolutePath
 
         val sut = PreviewImageFragment.newInstance(ocFile, true, false)
 
         activity.addFragment(sut)
 
+        shortSleep()
         shortSleep()
 
         screenshot(activity)
