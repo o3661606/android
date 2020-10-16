@@ -44,7 +44,7 @@ class PreviewImageFragmentIT : AbstractIT() {
         activity.addFragment(sut)
 
         shortSleep()
-        shortSleep()
+        waitForIdleSync()
 
         screenshot(activity)
     }
@@ -62,7 +62,7 @@ class PreviewImageFragmentIT : AbstractIT() {
         activity.addFragment(sut)
 
         shortSleep()
-        shortSleep()
+        waitForIdleSync()
 
         screenshot(activity)
     }
